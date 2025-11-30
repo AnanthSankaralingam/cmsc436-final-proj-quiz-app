@@ -1,13 +1,30 @@
 # CMSC Infinity
 
-**Problem**: took a lot of CMSC courses but lose after while
+**Problem**: took a lot of CMSC courses but forget after while
+**Target Users**: Current and recent grad UMD CS
+**Solution**: app with high level multiple choice quizzes to refresh knowledge
 
-**Target Users**: Upper-class CS students and alumni
-
-**Solution**: app with high level MC quizzes to refresh knowledge
-
+### User Flow
+1. Open app → MainActivity (landing page)
+2. Tap "Start Quiz" → QuizActivity
+3. Answer questions (see ads between questions)
+4. Complete quiz → ResultsActivity shows score
+5. Option to view Leaderboard or return Home
+   
 ---
 ## Implementation Plan
+### Models
+1. Question - Quiz question structure
+2. QuizSession - Current quiz state tracker
+3. UserProfile - User stats and settings
+4. LeaderboardEntry - Ranking data
+
+### Views, Controllers
+1. MainActivity (Landing Page). welcome message, buttons for start quiz, open profile, see leaderboard, etc.
+2. QuizActivity (Question answer page). progress bar (new GUI component). ads between questions or at bottom of page. pass data to results via Intent. use Question, QuizSession model
+3. ResultsActivity (score page). use UserProfile, LeaderboardEntry model
+4. LeaderBoardActivity. display top scores and rank from Firebase. use UserProfile, LeaderboardEntry model
+---
 
 ## ✅ Project Requirements Checklist
 
