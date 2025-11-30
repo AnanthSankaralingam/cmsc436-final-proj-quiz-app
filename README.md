@@ -1,7 +1,9 @@
 # CMSC Infinity
 
 **Problem**: took a lot of CMSC courses but forget after while
+
 **Target Users**: Current and recent grad UMD CS
+
 **Solution**: app with high level multiple choice quizzes to refresh knowledge
 
 ### User Flow
@@ -12,7 +14,9 @@
 5. Option to view Leaderboard or return Home
    
 ---
+
 ## Implementation Plan
+
 ### Models
 1. Question - Quiz question structure
 2. QuizSession - Current quiz state tracker
