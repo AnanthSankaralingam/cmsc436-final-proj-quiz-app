@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+//google
+    id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -48,4 +51,8 @@ dependencies {
 
     // for ad
     implementation("com.google.android.gms:play-services-ads:24.8.0")
+
+    // firbeas
+    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
+    implementation("com.google.firebase:firebase-analytics")
 }
