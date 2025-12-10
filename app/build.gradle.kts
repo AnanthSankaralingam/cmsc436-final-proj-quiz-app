@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 //google
-    id("com.android.application")
     id("com.google.gms.google-services")
 }
 
@@ -39,6 +38,12 @@ android {
 }
 
 dependencies {
+    // firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
+    implementation( "com.google.firebase:firebase-database:22.0.1" )
+
+    // for ad
+    implementation("com.google.android.gms:play-services-ads:24.8.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -48,11 +53,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    // for ad
-    implementation("com.google.android.gms:play-services-ads:24.8.0")
-
-    // firbeas
-    implementation(platform("com.google.firebase:firebase-bom:34.6.0"))
-    implementation("com.google.firebase:firebase-analytics")
 }
