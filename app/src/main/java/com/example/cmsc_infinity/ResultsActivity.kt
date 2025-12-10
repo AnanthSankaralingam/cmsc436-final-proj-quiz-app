@@ -1,4 +1,6 @@
 package com.example.cmsc_infinity
 
-class ResultsActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class ResultsActivity : AppCompatActivity() {
 }

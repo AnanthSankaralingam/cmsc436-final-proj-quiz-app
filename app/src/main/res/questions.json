@@ -1,0 +1,310 @@
+{
+  "CMSC131": [
+    {
+      "question": "What is encapsulation in object-oriented programming?",
+      "options": {
+        "A": "The ability to reuse code in different programs",
+        "B": "Bundling data and methods that operate on that data within one unit",
+        "C": "The process of converting one data type to another",
+        "D": "A way to make code execute faster"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which of the following best describes inheritance?",
+      "options": {
+        "A": "Creating new classes from existing ones",
+        "B": "Storing data privately in a class",
+        "C": "Allowing functions to take different argument types",
+        "D": "Protecting data from unauthorized access"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "In Java, which keyword is used to create a subclass?",
+      "options": {
+        "A": "extends",
+        "B": "implements",
+        "C": "inherits",
+        "D": "subclass"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "Which of these is an example of polymorphism?",
+      "options": {
+        "A": "Declaring variables of different types",
+        "B": "A method behaving differently depending on input",
+        "C": "Hiding data members from users",
+        "D": "Using interfaces to reduce code duplication"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "What does the 'this' keyword refer to?",
+      "options": {
+        "A": "The superclass",
+        "B": "The current object instance",
+        "C": "A local variable",
+        "D": "A static method"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which of these is NOT an OOP principle?",
+      "options": {
+        "A": "Inheritance",
+        "B": "Abstraction",
+        "C": "Encapsulation",
+        "D": "Compilation"
+      },
+      "correct": "D"
+    },
+    {
+      "question": "What is the access modifier that allows visibility only within the same package?",
+      "options": {
+        "A": "public",
+        "B": "private",
+        "C": "protected",
+        "D": "default"
+      },
+      "correct": "D"
+    },
+    {
+      "question": "Which method is automatically called when an object is created?",
+      "options": {
+        "A": "main()",
+        "B": "constructor",
+        "C": "init()",
+        "D": "start()"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which of the following can be overloaded in Java?",
+      "options": {
+        "A": "Constructors",
+        "B": "Private methods",
+        "C": "Both A and B",
+        "D": "None of the above"
+      },
+      "correct": "C"
+    },
+    {
+      "question": "Which of the following allows multiple classes to share the same interface?",
+      "options": {
+        "A": "Encapsulation",
+        "B": "Polymorphism",
+        "C": "Abstraction",
+        "D": "Composition"
+      },
+      "correct": "B"
+    }
+  ],
+
+  "CMSC132": [
+    {
+      "question": "Which data structure uses FIFO order?",
+      "options": {
+        "A": "Stack",
+        "B": "Queue",
+        "C": "Tree",
+        "D": "Graph"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which operation on a stack removes the top element?",
+      "options": {
+        "A": "insert()",
+        "B": "pop()",
+        "C": "push()",
+        "D": "top()"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "What is the time complexity of accessing an element in an array by index?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(n)",
+        "C": "O(log n)",
+        "D": "O(n log n)"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "Which traversal method visits nodes in sorted order for a BST?",
+      "options": {
+        "A": "Preorder",
+        "B": "Inorder",
+        "C": "Postorder",
+        "D": "Level order"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which of these is a characteristic of a linked list?",
+      "options": {
+        "A": "Fixed size",
+        "B": "Random access",
+        "C": "Dynamic size",
+        "D": "Requires contiguous memory"
+      },
+      "correct": "C"
+    },
+    {
+      "question": "Which data structure uses LIFO order?",
+      "options": {
+        "A": "Stack",
+        "B": "Queue",
+        "C": "Array",
+        "D": "Graph"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "Which of the following operations is most efficient for hash tables?",
+      "options": {
+        "A": "Insertion",
+        "B": "Traversal",
+        "C": "Sorting",
+        "D": "Reversal"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "What does BFS stand for in graph traversal?",
+      "options": {
+        "A": "Binary First Search",
+        "B": "Breadth First Search",
+        "C": "Base First Search",
+        "D": "Balanced First Search"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which of the following is a non-linear data structure?",
+      "options": {
+        "A": "Array",
+        "B": "Linked List",
+        "C": "Tree",
+        "D": "Stack"
+      },
+      "correct": "C"
+    },
+    {
+      "question": "What is the typical use of a priority queue?",
+      "options": {
+        "A": "Sorting data in ascending order",
+        "B": "Selecting elements based on priority",
+        "C": "Random element access",
+        "D": "Managing recursion"
+      },
+      "correct": "B"
+    }
+  ],
+
+  "CMSC216": [
+    {
+      "question": "What language is most closely associated with CMSC216?",
+      "options": {
+        "A": "Python",
+        "B": "C",
+        "C": "Java",
+        "D": "Assembly"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which of these is a valid pointer declaration in C?",
+      "options": {
+        "A": "int ptr;",
+        "B": "pointer int ptr;",
+        "C": "int *ptr;",
+        "D": "ptr int;"
+      },
+      "correct": "C"
+    },
+    {
+      "question": "What does malloc() do in C?",
+      "options": {
+        "A": "Allocates memory dynamically",
+        "B": "Frees allocated memory",
+        "C": "Initializes variables to zero",
+        "D": "Converts data types"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "What is the output of sizeof(char)?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "4",
+        "D": "Depends on the compiler"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "What is segmentation fault?",
+      "options": {
+        "A": "A syntax error",
+        "B": "Accessing restricted memory",
+        "C": "Invalid pointer arithmetic",
+        "D": "Incorrect function call"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "Which header file is needed for malloc()?",
+      "options": {
+        "A": "<stdio.h>",
+        "B": "<stdlib.h>",
+        "C": "<string.h>",
+        "D": "<malloc.h>"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "What does the & operator do in C?",
+      "options": {
+        "A": "Dereferences a pointer",
+        "B": "Gets the address of a variable",
+        "C": "Performs logical AND",
+        "D": "Allocates memory"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "What is the correct syntax to define a struct?",
+      "options": {
+        "A": "struct MyStruct { int x; };",
+        "B": "structure MyStruct { int x; };",
+        "C": "class MyStruct { int x; };",
+        "D": "define struct MyStruct ( int x );"
+      },
+      "correct": "A"
+    },
+    {
+      "question": "What happens if you don’t free malloc’ed memory?",
+      "options": {
+        "A": "Compiler error",
+        "B": "Memory leak",
+        "C": "Segmentation fault immediately",
+        "D": "Variable reset automatically"
+      },
+      "correct": "B"
+    },
+    {
+      "question": "What is the file extension for C source code files?",
+      "options": {
+        "A": ".java",
+        "B": ".py",
+        "C": ".cpp",
+        "D": ".c"
+      },
+      "correct": "D"
+    }
+  ]
+}
