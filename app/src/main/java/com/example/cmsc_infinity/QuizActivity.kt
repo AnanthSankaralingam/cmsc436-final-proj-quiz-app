@@ -20,6 +20,7 @@ class QuizActivity : AppCompatActivity() {
     private var questionSetResponse: ArrayList<Question> = ArrayList()
     private var currQuestion = 0
     private var score = 0
+    private var courseName: String = "CMSC131"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,11 +34,11 @@ class QuizActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
 
         // retrieve which course button was clicked via intent
-        val course = intent.getStringExtra("courseSelected") ?: "CMSC131"
+        courseName = intent.getStringExtra("courseSelected") ?: "CMSC131"
 
         // fetch course model with questions
         val questionSet = QuestionSet()
-        questionSet.loadQuestionsFromFirebase(course) { success ->
+        questionSet.loadQuestionsFromFirebase(courseName) { success ->
             if (success) {
                 questionSetResponse = questionSet.questions
                 Log.w("QuizActivity", "Loaded ${questionSet.questions.size} questions")
@@ -58,6 +59,7 @@ class QuizActivity : AppCompatActivity() {
             val intent = Intent(this, ResultsActivity::class.java)
             intent.putExtra("quizScore", score)
             intent.putExtra("questionSetResponseSize", questionSetResponse.size)
+            intent.putExtra("courseSelected", courseName)
             startActivity(intent)
             return
         }

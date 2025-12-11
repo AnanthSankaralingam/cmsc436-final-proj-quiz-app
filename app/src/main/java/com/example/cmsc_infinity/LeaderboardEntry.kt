@@ -1,4 +1,7 @@
 package com.example.cmsc_infinity
 
-class LeaderboardEntry {
-}
+data class LeaderboardEntry (
+    val score: Int = 0,
+    val course: String = "",
+    val timestamp: Long = 0
+)

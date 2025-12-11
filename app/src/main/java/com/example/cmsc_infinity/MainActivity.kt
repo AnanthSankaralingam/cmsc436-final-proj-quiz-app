@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var start131Button : Button
     private lateinit var start132Button : Button
     private lateinit var start216Button : Button
+    private lateinit var viewLeaderboardButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,8 +46,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         // TODO: use persistent local storage to set this value and the dark mode
+        val prefs = getSharedPreferences("APP_PREFS", MODE_PRIVATE)
+        val last = prefs.getInt("LAST_SCORE", -1)
+
         lastScoreTextView = findViewById(R.id.lastScoreText)
-        lastScoreTextView.text = "Last Score: ${intent.getIntExtra("lastScore", 0)}"
+
+        if (last != -1) {
+            lastScoreTextView.text = "Last Score: $last"
+        } else {
+            lastScoreTextView.text = "Last Score: 0"
+        }
 
         // onclicks for buttons. route to quiz activity with intent mentioning what course data to load
         start131Button = findViewById(R.id.start131Button)
@@ -67,6 +76,11 @@ class MainActivity : AppCompatActivity() {
         start216Button.setOnClickListener {
             val intent = Intent(this, QuizActivity::class.java)
             intent.putExtra("courseSelected", "CMSC216")
+            startActivity(intent)
+        }
+        viewLeaderboardButton = findViewById(R.id.viewLeaderboardButton)
+        viewLeaderboardButton.setOnClickListener {
+            val intent = Intent(this, LeaderboardActivity::class.java)
             startActivity(intent)
         }
     }
