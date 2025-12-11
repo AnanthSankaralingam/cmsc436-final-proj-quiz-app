@@ -1,5 +1,10 @@
 # CMSC Infinity
 
+### Authors
+Manasvi Sriranga (33% participation)
+Ananth Sankaralingam (33% participation)
+Sarah Sating (33% participation)
+
 **Problem**: took a lot of CMSC courses but forget after while
 
 **Target Users**: Current and recent grad UMD CS
