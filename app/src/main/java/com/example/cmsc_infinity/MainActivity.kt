@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         }
         // TODO: use persistent local storage to set this value and the dark mode
         lastScoreTextView = findViewById(R.id.lastScoreText)
+        lastScoreTextView.text = "Last Score: ${intent.getIntExtra("lastScore", 0)}"
 
         // onclicks for buttons. route to quiz activity with intent mentioning what course data to load
         start131Button = findViewById(R.id.start131Button)

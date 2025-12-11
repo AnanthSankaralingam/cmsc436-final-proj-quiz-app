@@ -1,4 +1,5 @@
 package com.example.cmsc_infinity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -50,8 +51,14 @@ class QuizActivity : AppCompatActivity() {
 
     private fun showQuestion(index: Int) {
         if (index >= questionSetResponse.size) {
-            questionView.text = "quiz Score: $score/${questionSetResponse.size}"
+            //questionView.text = "quiz Score: $score/${questionSetResponse.size}"
             disableButtons()
+
+            // go to results
+            val intent = Intent(this, ResultsActivity::class.java)
+            intent.putExtra("quizScore", score)
+            intent.putExtra("questionSetResponseSize", questionSetResponse.size)
+            startActivity(intent)
             return
         }
 
