@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,66 +9,117 @@
     android:padding="24dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modeTV"
+        android:text="Dark Mode: "
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/modeTV"
+        android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcomeTV"
+        android:text="Welcome to CMSC Infinity!"
+        android:layout_centerHorizontal="true"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/umd_red_dark"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/instructionsTV"
+        android:text="Select one of the quizzes below to test your CMSC knowledge :)"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:textColor="@color/umd_red"
+        android:textAlignment="center"
+        android:layout_below="@id/welcomeTV"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <!-- Start 131 Quiz -->
+    <Button
+        android:id="@+id/start131Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start CMSC131 Quiz"
+        android:layout_below="@id/instructionsTV"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/start132Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start131Button"
+        android:text="Start CMSC132 Quiz"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/start216Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start CMSC216 Quiz"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/start132Button" />
+
     <!-- Last Score Text -->
     <TextView
         android:id="@+id/lastScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Last Score: "
-        android:textAppearance="?attr/textAppearanceBodyLarge"
-        android:textColor="?attr/colorOnSurface"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp" />
-
-    <!-- Start 131 Quiz -->
-    <Button
-        android:id="@+id/start131Button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Start CMSC131 Quiz"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="?attr/colorOnPrimary"
-        app:layout_constraintTop_toBottomOf="@id/lastScoreText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp" />
+        android:textColor="@color/umd_red_dark"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"
+        android:textAlignment="center"
+        android:layout_below="@id/start216Button"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
 
     <Button
-        android:id="@+id/start132Button"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start CMSC132 Quiz"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="?attr/colorOnPrimary"
-        app:layout_constraintTop_toBottomOf="@id/start131Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        android:id="@+id/viewLeaderboardButton"
+        android:text="View Leaderboard"
+        android:backgroundTint="@color/umd_red_dark"
+        android:layout_below="@id/lastScoreText"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
 
-    <Button
-        android:id="@+id/start216Button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Start CMSC216 Quiz"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="?attr/colorOnPrimary"
-        app:layout_constraintTop_toBottomOf="@id/start132Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
 
     <!-- Ad container -->
     <LinearLayout
         android:id="@+id/ad_view"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        android:layout_below="@id/viewLeaderboardButton"
+        android:layout_marginTop="200dp"
+         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
