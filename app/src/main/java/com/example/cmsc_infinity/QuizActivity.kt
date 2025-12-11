@@ -2,6 +2,7 @@ package com.example.cmsc_infinity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -12,6 +13,8 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var answerOptionBButton : Button
     private lateinit var answerOptionCButton : Button
     private lateinit var answerOptionDButton : Button
+
+    private lateinit var progressBar : ProgressBar
 
     private var questionSetResponse: ArrayList<Question> = ArrayList()
     private var currQuestion = 0
@@ -26,6 +29,7 @@ class QuizActivity : AppCompatActivity() {
         answerOptionBButton = findViewById(R.id.answerOptionB)
         answerOptionCButton = findViewById(R.id.answerOptionC)
         answerOptionDButton = findViewById(R.id.answerOptionD)
+        progressBar = findViewById(R.id.progressBar)
 
         // retrieve which course button was clicked via intent
         val course = intent.getStringExtra("courseSelected") ?: "CMSC131"
@@ -51,6 +55,7 @@ class QuizActivity : AppCompatActivity() {
             return
         }
 
+
         val q = questionSetResponse[index]
         questionView.text = q.question
         answerOptionAButton.text = q.options["A"]
@@ -63,12 +68,14 @@ class QuizActivity : AppCompatActivity() {
             if (choice == q.correct) score++
             currQuestion++
             showQuestion(currQuestion)
+            progressBar.progress += 10
         }
 
         answerOptionAButton.setOnClickListener { onClick("A") }
         answerOptionBButton.setOnClickListener { onClick("B") }
         answerOptionCButton.setOnClickListener { onClick("C") }
         answerOptionDButton.setOnClickListener { onClick("D") }
+
     }
 
     private fun disableButtons() {
