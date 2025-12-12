@@ -5,6 +5,7 @@
 
 **CMSC Infinity** is an Android application built to help **University of Maryland Computer Science students** quickly review and retain core concepts from their CMSC courses. Over time, even the best students forget details from older classes—this app makes it easy to refresh key topics through interactive quizzes.
 
+[![Watch the video](https://img.youtube.com/vi/ZYGu1eUsBi8/maxresdefault.jpg)](https://youtu.be/ZYGu1eUsBi8)
 ---
 
 ## 🎯 Problem & Solution
