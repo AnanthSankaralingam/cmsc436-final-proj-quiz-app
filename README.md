@@ -1,51 +1,58 @@
 # CMSC Infinity
-
-**Authors**: Ananth Sankaralingam (33% participation), Sarah Sating (33% participation), & Manasvi Sriranga (33% participation)
-
-**Problem**: took a lot of CMSC courses but forget after while
-
-**Target Users**: Current and recent grad UMD CS
-
-**Solution**: app with high level multiple choice quizzes to refresh knowledge
-
-### User Flow
-1. Open app → MainActivity (landing page)
-2. Tap "Start Quiz" → QuizActivity
-3. Answer questions (see ads between questions)
-4. Complete quiz → ResultsActivity shows score
-5. Option to view Leaderboard or return Home
-   
-
-## Implementation Plan
-
-### Models
-1. Question - Quiz question structure
-2. QuizSession - Current quiz state tracker
-3. UserProfile - User stats and settings
-4. LeaderboardEntry - Ranking data
-
-### Views, Controllers
-1. MainActivity (Landing Page). welcome message, buttons for start quiz, open profile, see leaderboard, etc.
-2. QuizActivity (Question answer page). ads between questions or at bottom of page. pass data to results via Intent. use Question, QuizSession model
-3. ResultsActivity (score page). use UserProfile, LeaderboardEntry model
-4. LeaderBoardActivity. display top scores and rank from Firebase. use UserProfile, LeaderboardEntry model
 ---
 
-## ✅ Project Requirements Checklist
+## Overview
 
-- [X ] **1. App Icon (4 pts)** - Nice looking custom icon for the app
-- [x ] **2. MVC Architecture (8 pts)** - Proper Model-View-Controller implementation
-- [x ] **3. Model Usage (8 pts)** - All data read from and written to Model (QuizSession)
-- [X ] **4. Multiple Views (6 pts)** - At least 3 distinct views implemented (Main, Quiz, results, leaderboard)
-- [ x] **5. Data Sharing (5 pts)** - At least 2 views share or pass data between them (quiz and results)
-- [x ] **6. Local Persistent Data (6 pts)** - At least 2 meaningful persistent variables (user preferences for dark mode, settings for class filter, last score)
-- [x ] **7. Remote Persistent Data (10 pts)** - Meaningful remote data storage (quiz questions, user scores)
-- [x ] **8. New GUI Components (6 pts)** - At least 2 new components not covered in class (progress bar, switch)
-  - [X ] Component 1: progress bar
-  - [x ] Component 2: dark mode switch
-- [X ] **9. Event Listeners (7 pts)** - Meaningful listener on at least one NEW GUI component (switch, answer choice buttons)
-- [x ] **10. App/Hardware/Google Services (10 pts)** - Integration with phone feature or Google service (email, leaderboard via firebase)
-- [X ] **11. Meaningful Functionality (20 pts)**
-  - [X ] Meaningful/nice functionality (10 pts)
-  - [ x] Good looking/free flowing UI (10 pts)
-- [x ] **12. Advertising (10 pts)** - Fake ad from Google services (bottom of Main)
+**CMSC Infinity** is an Android application built to help **University of Maryland Computer Science students** quickly review and retain core concepts from their CMSC courses. Over time, even the best students forget details from older classes—this app makes it easy to refresh key topics through interactive quizzes.
+
+---
+
+## 🎯 Problem & Solution
+
+- **Problem:** After taking many CMSC courses, UMD alumni and current students often forget important concepts.  
+- **Target Users:** Current and recently graduated UMD CS students.  
+- **Solution:** A mobile quiz app that delivers short, high-level multiple-choice quizzes on CS topics, helping users stay sharp through quick review sessions.
+
+---
+
+## 🧭 User Flow
+
+1. **Launch App** → Opens **MainActivity** (landing page)  
+2. Tap **“Start Quiz”** → Moves to **QuizActivity**  
+3. Answer multiple-choice questions (ads displayed between some questions)  
+4. On completion → **ResultsActivity** displays score and performance  
+5. User can view **Leaderboard** or return to Home  
+
+---
+
+## ⚙️ Implementation Details
+
+### **Architecture**
+The app follows a clean **Model-View-Controller (MVC)** structure for maintainability and clarity.
+
+### **Models**
+- **Question:** Defines quiz question structure  
+- **QuizSession:** Tracks current quiz state and progress  
+- **UserProfile:** Stores user settings, stats, and preferences  
+- **LeaderboardEntry:** Represents ranking data from Firebase  
+
+### **Views / Controllers**
+- **MainActivity:** Landing page with navigation to quiz, profile, or leaderboard  
+- **QuizActivity:** Displays questions, manages answer input, and integrates ads  
+- **ResultsActivity:** Shows user’s score and updates profile data  
+- **LeaderboardActivity:** Displays top users via Firebase integration  
+
+---
+
+## 💾 Data & Features
+
+- **Local Persistent Data:** Stores user preferences (dark mode, filters, last score)  
+- **Remote Persistent Data:** Quiz questions and leaderboard data stored on **Firebase**  
+- **Google Services Integration:** Firebase for leaderboard and authentication  
+- **Advertising Integration:** Google AdMob mock ad placement for simulation
+
+
+**Authors**: Ananth Sankaralingam, Sarah Sating, Manasvi Sriranga  
+
+
+---
